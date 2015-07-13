@@ -9,6 +9,8 @@
 //= require_tree .
 //= require_self
 
+//test comment for test commit
+
 if (typeof jQuery !== 'undefined') {
 	(function($) {
 		$('#spinner').ajaxStart(function() {
