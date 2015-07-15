@@ -3,8 +3,9 @@ require 'page-object'
 class BlogPage
   include PageObject
 
-  links(:posts, :class => 'postLink')
-
+  button(:create_post, :id=> 'create_post')
+  div(:posts, :class => 'posts')
+  links(:post_links, :class => 'postLink')
 
   def goToBlogger (blogger)
     visit_page 'http://localhost:8080/grails-blog/' + blogger
