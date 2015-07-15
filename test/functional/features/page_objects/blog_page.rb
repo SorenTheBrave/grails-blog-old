@@ -7,6 +7,8 @@ class BlogPage
   text_field (:search_field,:class => 'search')
   button(:search_btn, :class => 'searchButton')
   h2(:postTitles, :class => 'postTitles')
+  button(:create_post, :id=> 'create_post')
+  div(:posts, :class => 'posts')
 
   def goToBlogger (blogger)
     visit_page 'http://localhost:8080/grails-blog/' + blogger
