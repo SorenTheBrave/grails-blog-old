@@ -15,4 +15,3 @@ end
 And /^the newly added blog post is at the top of the recent posts list$/ do
 	pending
 end
-
