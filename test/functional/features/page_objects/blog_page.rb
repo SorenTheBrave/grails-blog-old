@@ -3,11 +3,17 @@ require 'page-object'
 class BlogPage
   include PageObject
 
+  link(:click_post, :text => "post1")
+  link(:create_post, :text => "New Post")
+
+
+
+ # OLD prefedined things
   links(:post_links, :class => 'postLink')
-  text_field (:search_field,:class => 'search')
+  text_field(:search_field, :class => 'search')
   button(:search_btn, :class => 'searchButton')
   h2(:postTitles, :class => 'postTitles')
-  button(:create_post, :id=> 'create_post')
+  #button(:create_post, :id=> 'create_post')
   div(:posts, :class => 'posts')
 
   def goToBlogger (blogger)
@@ -44,4 +50,3 @@ class BlogPage
     return valid
   end
 end
->>>>>>> 176ca61350b31bb4c44cf8280835b89ec93b9de6

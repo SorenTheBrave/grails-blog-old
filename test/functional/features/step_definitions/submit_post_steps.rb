@@ -1,31 +1,19 @@
 require "watir-webdriver"
 
 Given /^I am logged in as (.*)$/ do |active_user|
-	visit_page 'http://localhost:8080/grails-blog/home_page.gsp'
+	go_to_blog_home
+  go_to_blog
 end
 
 When /^I publish a new blog post$/ do 
-
-	on_page BlogPage do |page|
-		page.create_post
-	end
-	
-	on_page NewPostPage do |page|
-		page.post_title = "post1"
-		page.post_content = "Some basic post content"
-		page.submit
-	end
+	publish_post
 end
 
 Then /^I am notified that the blog post was successfully added$/ do
-	on_page PostSuccessPage do |page|
-		expect(page).to include("Success! Post was added.")
-		page.return
-	end
+		expect(post_created?).to be true
 end
 
 And /^the newly added blog post is at the top of the recent posts list$/ do
-	on_page BlogPage do |page|
-		expect(page.posts).to include("post1")
-	end
+	go_to_post_list
+  expect(get_first_post_title).to eq("post1")
 end

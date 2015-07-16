@@ -10,5 +10,5 @@ When (/^I choose a blog post$/) do
 end
 
 Then (/^I should see the blog post$/) do
-  expect(get_post_title).to be eq('post1')
+  expect(get_post_title).to eq('post1')
 end

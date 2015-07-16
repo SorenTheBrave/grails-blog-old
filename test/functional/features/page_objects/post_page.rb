@@ -8,9 +8,6 @@ class PostPage
   link(:expand_comment_link, :id => 'Expand Comments')
   div(:comments, :id => 'Comment Container')
 
-  def get_post_subject
-    @browser.h1.text
-  end
   def comments_exist?
     click_element(expand_comment_link)
     comments.visible?
@@ -21,7 +18,7 @@ class PostPage
 
   button(:submit, :id => 'submit')
 
-  text_area(:comment, id => 'new_comment_area')
+  text_area(:comment, :id => 'new_comment_area')
 
   def type_comment
     @browser.text_field(:id, 'new_comment_area').set('test comment')

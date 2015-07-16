@@ -5,6 +5,6 @@ class HomePage
 
   page_url "http://localhost:8080/grails-blog/"
 
-  link(:click_blog, :link_text => 'blog1')
+  link(:click_blog, :link_text => 'Log in as blogger')
 
 end
