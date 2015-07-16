@@ -88,6 +88,8 @@
 			<p>Click the link below to get started</p>
 
 			<a href="/grails-blog/Post/index">Log in as blogger</a>
+			<br/>
+			<a href="/grails-blog/web-app/secretPage.gsp">He man</a>
 		</div>
 	</body>
 </html>
