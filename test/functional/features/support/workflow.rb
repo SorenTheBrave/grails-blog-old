@@ -1,4 +1,5 @@
 require 'page-object'
+require 'watir-webdriver'
 include PageObject::PageFactory
 
 def get_post_title
@@ -39,4 +40,8 @@ def comment_text
   on_page PostPage do |page|
     page.get_comment
   end
+end
+
+def get_browser_url
+  return @browser.url
 end
