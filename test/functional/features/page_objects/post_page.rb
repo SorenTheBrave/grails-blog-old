@@ -19,4 +19,17 @@ class PostPage
     element.click
   end
 
+  button(:submit, :id => 'submit')
+
+  text_area(:comment, id => 'new_comment_area')
+
+  def type_comment
+    @browser.text_field(:id, 'new_comment_area').set('test comment')
+  end
+
+  def get_comment
+    #@browser.li(:id,  )
+    pending
+  end
+
 end
