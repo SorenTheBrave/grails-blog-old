@@ -87,7 +87,7 @@
 			<h1>Welcome to GrailsBlog</h1>
 			<p>Click the link below to get started</p>
 
-			<a href="/grails-blog/homePage/index">My Blog</a>
+			<a href="/grails-blog/Post/index">Log in as blogger</a>
 		</div>
 	</body>
 </html>
