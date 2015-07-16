@@ -1,7 +1,7 @@
 require "watir-webdriver"
 
 Given /^I am logged in as (.*)$/ do |active_user|
-	visit_page blog_page
+	visit_page 'http://localhost:8080/grails-blog/home_page.gsp'
 end
 
 When /^I publish a new blog post$/ do 
