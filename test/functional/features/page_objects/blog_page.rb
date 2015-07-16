@@ -39,7 +39,7 @@ class BlogPage
   def compareDates (dates)
     valid = false
     dates.each do |i=1|
-      valid = (dates[i].jd < dates[i-1])
+      valid = (dates[i].jd < dates[i-1].jd)
     end
     return valid
   end
