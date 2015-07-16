@@ -22,3 +22,21 @@ def go_to_post
     page.click_post
   end
 end
+
+def add_comment
+  on_page PostPage do |page|
+    page.submit
+  end
+end
+
+def write_comment
+  on_page PostPage do |page|
+    page.type_comment
+  end
+end
+
+def comment_text
+  on_page PostPage do |page|
+    page.get_comment
+  end
+end
