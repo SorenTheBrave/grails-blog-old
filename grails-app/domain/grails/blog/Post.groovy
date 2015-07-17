@@ -10,10 +10,12 @@ class Post {
 	String postContent
 	String teaser
 	Boolean published = false
-	
+	Date lastUpdated
 	
     static constraints = {
-		postName(blank: false)
-		postContent(blank: false)
+		postName(nullable:false, blank: false, length:1..50)
+		teaser(length:1..100)
+		postContent(nullable: false)
+		published(nullable: false)
     }
 }

@@ -5,5 +5,5 @@ class Blog {
 
 	
 
-	String tile		//url
+	String title		//url
 }
